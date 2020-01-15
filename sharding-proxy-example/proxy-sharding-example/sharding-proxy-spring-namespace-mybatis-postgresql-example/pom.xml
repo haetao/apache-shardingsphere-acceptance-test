@@ -6,11 +6,11 @@
     <parent>
         <artifactId>proxy-sharding-example</artifactId>
         <groupId>org.apache.shardingsphere.example</groupId>
-        <version>4.0.0-RC4-SNAPSHOT</version>
+        <version>5.0.0-RC1-SNAPSHOT</version>
     </parent>
     <groupId>org.apache.shardingsphere.example</groupId>
     <artifactId>sharding-proxy-spring-namespace-mybatis-postgresql-example</artifactId>
-    <version>4.0.0-RC4-SNAPSHOT</version>
+    <version>5.0.0-RC1-SNAPSHOT</version>
 
     <name>AcceptanceTest::proxy::postgresql::spring-namespace-mybatis</name>
 
@@ -20,10 +20,10 @@
             <artifactId>example-spring-mybatis</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-jdbc-spring-namespace</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

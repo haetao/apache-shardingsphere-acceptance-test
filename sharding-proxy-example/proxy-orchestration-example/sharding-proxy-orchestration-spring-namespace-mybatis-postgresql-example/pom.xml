@@ -6,11 +6,11 @@
     <parent>
         <artifactId>proxy-orchestration-example</artifactId>
         <groupId>org.apache.shardingsphere.example</groupId>
-        <version>4.0.0-RC4-SNAPSHOT</version>
+        <version>5.0.0-RC1-SNAPSHOT</version>
     </parent>
     <groupId>org.apache.shardingsphere.example</groupId>
     <artifactId>sharding-proxy-orchestration-spring-namespace-mybatis-postgresql-example</artifactId>
-    <version>4.0.0-RC4-SNAPSHOT</version>
+    <version>5.0.0-RC1-SNAPSHOT</version>
 
     <name>AcceptanceTest::proxy::orchestration::postgresql::spring-namespace-mybatis</name>
     <properties>
