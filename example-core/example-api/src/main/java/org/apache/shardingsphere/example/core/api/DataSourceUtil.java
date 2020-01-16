@@ -57,7 +57,7 @@ public final class DataSourceUtil {
                 return createProxyPostgreSQLDataSource(dataSourceName);
             case PROXY_ORCHESTRATION_MYSQL:
                 return createProxyOrchestrationMySQLDataSource(dataSourceName);
-            case PROXY_ORCHESTRATION_PostgreSQL:
+            case PROXY_ORCHESTRATION_POSTGRESQL:
                 return createProxyOrchestrationPostgreSQLDataSource(dataSourceName);
             default:
                 throw new UnsupportedOperationException(dbType.name());

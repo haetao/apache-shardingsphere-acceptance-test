@@ -14,12 +14,13 @@ import org.junit.Test;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-public class RawJDBCJavaShardingTest {
+public class RawJDBCOrchestrationJavaMasterSlaveTest {
+    
     @Test
     public void assertCommonService() throws SQLException {
-        DataSource dataSource = DataSourceFactory.newInstance(ShardingType.SHARDING_DATABASES_AND_TABLES);
+        DataSource dataSource = DataSourceFactory.newInstance(ShardingType.MASTER_SLAVE);
         ExampleService exampleService = new OrderServiceImpl(new OrderRepositoryImpl(dataSource), new OrderItemRepositoryImpl(dataSource), new AddressRepositoryImpl(dataSource));
         ExampleExecuteTemplate.run(exampleService);
-        RawJdbcAssertUtils.assertShardingTableDatabases(exampleService);
+        RawJdbcAssertUtils.assertMasterSlaves(exampleService);
     }
 }

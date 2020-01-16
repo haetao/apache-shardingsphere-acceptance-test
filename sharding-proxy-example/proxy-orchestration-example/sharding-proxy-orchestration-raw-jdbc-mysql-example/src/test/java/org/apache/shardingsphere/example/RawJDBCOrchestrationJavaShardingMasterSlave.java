@@ -14,7 +14,7 @@ import org.junit.Test;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-public class RawJDBCJavaShardingMasterSlave {
+public class RawJDBCOrchestrationJavaShardingMasterSlave {
     @Test
     public void assertCommonService() throws SQLException {
         DataSource dataSource = DataSourceFactory.newInstance(ShardingType.SHARDING_MASTER_SLAVE);

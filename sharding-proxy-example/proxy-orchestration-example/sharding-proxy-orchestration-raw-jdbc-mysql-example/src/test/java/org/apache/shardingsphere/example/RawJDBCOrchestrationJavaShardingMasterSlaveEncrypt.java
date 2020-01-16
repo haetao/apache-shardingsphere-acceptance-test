@@ -12,12 +12,12 @@ import org.junit.Test;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-public class RawJDBCJavaShardingEncryptTest {
+public class RawJDBCOrchestrationJavaShardingMasterSlaveEncrypt {
     @Test
     public void assertCommonService() throws SQLException {
-        DataSource dataSource = DataSourceFactory.newInstance(ShardingType.SHARDING_ENCRYPT);
-        /*ExampleService exampleService = new UserServiceImpl(new UserRepositoryImpl(dataSource));
+        /*DataSource dataSource = DataSourceFactory.newInstance(ShardingType.SHARDING_MASTER_SLAVE_ENCRYPT);
+        ExampleService exampleService = new UserServiceImpl(new UserRepositoryImpl(dataSource));
         ExampleExecuteTemplate.run(exampleService);
-        RawJdbcAssertUtils.assertShardingEncrypt(exampleService);*/
+        RawJdbcAssertUtils.assertShardingMasterSlaveEncrypt(exampleService);*/
     }
 }
