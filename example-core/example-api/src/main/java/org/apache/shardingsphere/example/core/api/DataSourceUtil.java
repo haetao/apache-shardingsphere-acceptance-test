@@ -31,9 +31,9 @@ public final class DataSourceUtil {
     
     private static final int PROXY_POSTGRES_PORT = 3309;
     
-    private static final int PROXY_ORCHESTRATION_MYSQL_PORT = 3310;
+    private static final int PROXY_ORCHESTRATION_MYSQL_PORT = 3315;
     
-    private static final int PROXY_ORCHESTRATION_POSTGRES_PORT = 3311;
+    private static final int PROXY_ORCHESTRATION_POSTGRES_PORT = 3316;
     
     private static final String MYSQL_USER_NAME = "root";
     
