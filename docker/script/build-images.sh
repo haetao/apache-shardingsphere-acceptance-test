@@ -13,6 +13,7 @@ PORT_PROXY_PG_ZK=12185
 
 PORT_RAW_PROXY=3307
 
+PROXY_ORCHESTRATION_MYSQL_PORT='PROXY_ORCHESTRATION_MYSQL_PORT = 3310'
 cd docker
 ip=`ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:" | head -1`
 sudo cp ../../$1/sharding-distribution/sharding-proxy-distribution/target/*.tar.gz  ./sharding-proxy-bin.tar.gz
@@ -30,8 +31,8 @@ sudo sed -i "s/3306/${PORT_JDBC_MYSQL}/g" `grep 3306 -rl example-core/example-ap
 sudo sed -i "s/5432/${PORT_JDBC_PG}/g" `grep 5432 -rl example-core/example-api/`
 sudo sed -i "s/3308/${PORT_PROXY_MYSQL_SHARDING}/g" `grep 3308 -rl example-core/example-api/`
 sudo sed -i "s/3309/${PORT_PROXY_PG_SHARDING}/g" `grep 3309 -rl example-core/example-api/`
-sudo sed -i "s/3310/${PORT_PROXY_MYSQL_ORCH}/g" `grep 3310 -rl example-core/example-api/`
-sudo sed -i "s/3311/${PORT_PROXY_PG_ORCH}/g" `grep 3311 -rl example-core/example-api/`
+sudo sed -i "s/${PROXY_ORCHESTRATION_MYSQL_PORT}/${PORT_PROXY_MYSQL_ORCH}/g" `grep ${PROXY_ORCHESTRATION_MYSQL_PORT} -rl example-core/example-api/`
+#sudo sed -i "s/3311/${PORT_PROXY_PG_ORCH}/g" `grep 3311 -rl example-core/example-api/`
 
 sudo sed -i "s/localhost:3306/${ip}:${PORT_JDBC_MYSQL}/g" `grep localhost:3306 -rl sharding-jdbc-example/`
 sudo sed -i "s/localhost:5432/${ip}:${PORT_JDBC_PG}/g" `grep localhost:5432 -rl sharding-jdbc-example/`
